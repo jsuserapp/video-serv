@@ -58,6 +58,9 @@ func loadConf() {
 		conf.TLS.Port = "443"
 		ju.SaveJsConfFile(confFile, &conf)
 	}
+	if !conf.TLS.Enable && !conf.HTTP.Enable {
+		conf.HTTP.Enable = true
+	}
 	for i, source := range conf.VideoServer.SourceList {
 		conf.VideoServer.SourceList[i].Path = PathToLinux(source.Path)
 	}
