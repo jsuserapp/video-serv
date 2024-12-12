@@ -1,8 +1,8 @@
 package glb
 
 import (
+	"github.com/jsuserapp/ju"
 	"github.com/syndtr/goleveldb/leveldb"
-	"ju"
 )
 
 var servDb *leveldb.DB

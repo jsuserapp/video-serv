@@ -2,7 +2,7 @@ package httpserv
 
 import (
 	"bytes"
-	"ju"
+	"github.com/jsuserapp/ju"
 	"net/http"
 	"os"
 	"path/filepath"

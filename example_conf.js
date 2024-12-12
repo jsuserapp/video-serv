@@ -7,7 +7,7 @@ let conf = {
 	},
 	"http": {
 		"enable": true,
-		"port": "80"
+		"port": "80" //如果80被占用, 修改这个端口
 	},
 	"ws": {
 		"enable": false,

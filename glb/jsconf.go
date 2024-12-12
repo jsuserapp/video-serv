@@ -1,7 +1,7 @@
 package glb
 
 import (
-	"ju"
+	"github.com/jsuserapp/ju"
 )
 
 const (

@@ -2,8 +2,8 @@ package httpserv
 
 import (
 	"VideoServ/glb"
+	"github.com/jsuserapp/ju"
 	"golang.org/x/net/websocket"
-	"ju"
 	"net/http"
 )
 
