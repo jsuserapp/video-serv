@@ -210,3 +210,26 @@ func (ac *ApiController) PostVideoPositionSave() mvc.Result {
 		return ""
 	})
 }
+func (ac *ApiController) PostPlayPosition() mvc.Result {
+	return ac.JsonRequest(nil, func(js ju.JsonObject) string {
+		conf := glb.GetConf()
+		js.SetValue("play_position", conf.PlayPosition)
+		return ""
+	})
+}
+func (ac *ApiController) PostPlayPositionSave() mvc.Result {
+	obj := struct {
+		Start int64 `json:"start"`
+		End   int64 `json:"end"`
+	}{}
+	return ac.JsonRequest(&obj, func(js ju.JsonObject) string {
+		conf := glb.GetConf()
+		conf.PlayPosition.Start = obj.Start
+		conf.PlayPosition.End = obj.End
+		if !conf.Save() {
+			return "保存失败"
+		}
+
+		return ""
+	})
+}

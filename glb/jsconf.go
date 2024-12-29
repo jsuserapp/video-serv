@@ -35,6 +35,10 @@ type Conf struct {
 			Hash string `json:"hash"`
 		} `json:"source_list"`
 	} `json:"video_server"`
+	PlayPosition struct {
+		Start int64 `json:"start"`
+		End   int64 `json:"end"`
+	} `json:"play_position"`
 }
 
 func (cf *Conf) Save() bool {
